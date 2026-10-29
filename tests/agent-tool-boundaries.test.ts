@@ -21,6 +21,7 @@ describe("root and worker capability boundaries", () => {
   it("keeps root coordination separate from browser execution", () => {
     expect(rootAgent.defaultTools).toBe(false);
     expect(toolFiles(rootTools)).toEqual([
+      "artemis.ts",
       "ask_question.ts",
       "calendar.ts",
       "contacts.ts",
@@ -28,8 +29,10 @@ describe("root and worker capability boundaries", () => {
       "link__create_spend_request.ts",
       "link__retrieve_spend_request.ts",
       "messaging.ts",
+      "portfolio_holdings.ts",
       "run_browser.ts",
       "schedules.ts",
+      "sector_comps.ts",
       "task_cancel.ts",
       "vault.ts",
       "web_fetch.ts",

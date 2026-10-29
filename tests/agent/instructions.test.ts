@@ -9,7 +9,10 @@ describe("agent instructions", () => {
   it.each([
     ["scheduled-worker", "isolated background session"],
     ["scheduled-result", "evaluating the completed outcome"],
-    ["linq", "root coordinator"],
+    // The investor fork replaces the shopping "root coordinator" identity; the
+    // case still proves a linq turn selects the interactive role, by a phrase
+    // only that role carries.
+    ["linq", "Artemis Analyst"],
   ])("selects %s instructions for the current turn", async (role, phrase) => {
     const resolve = roleInstructions.events["turn.started"];
     expect(resolve).toBeDefined();
