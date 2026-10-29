@@ -115,7 +115,7 @@ describe("artemisGet", () => {
 
     const result = await artemisGet("/x/", CONFIG, {
       fetchImpl,
-      timeoutMs: 5,
+      timeoutMs: 25,
     });
     expect(result.status).toBe("unavailable");
     if (result.status !== "unavailable") return;
